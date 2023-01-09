@@ -1,0 +1,46 @@
+#Edward Godinez 
+#CSE 1250
+#11.14.2022 
+#Lab 12
+
+#This program will convert degrees Celsius to degrees Fahrenheit. 
+#Please enter the temperature in degrees Celsius; you may use decimals.
+#Define the function for the user greeting.
+def user_greeting():
+    print("This program will convert degrees Celsius to",\
+    "degrees Fahrenheit.")
+    print("Please enter the temperature in degrees Celsius;",\
+    "you may use decimals.")
+#Define the function for the askAgain code. 
+def askagain():
+    while True:
+        run = \
+input("Would you like to run the program again? (y/n): ").lower()
+        if run =='y':
+            return True
+        elif run =='n':
+            return False
+        else:
+            print("Invalid Input")
+#Main section of code.
+#Initialize/create a variable to control the main program loop.
+main = True
+user_greeting()
+#Main program loop
+while main:
+    print()
+    #Get the input for the temperature in Celsius.
+    celsius = float(input("Enter a tempature in Celsius: "))
+    #Conversion from celsius to farenheit.
+    fahrenheit = (float(celsius) * 9/5) + 32
+    print()
+    #Results formatted and display the output.
+    print("{:.1f}".format(celsius), "degrees Celsius is equal\
+to","{:.1f}".format(fahrenheit), "degrees Fahrenheit.")
+    print() 
+    #Call the runAgain function.
+    if not askagain(): 
+    #Exit message.
+        print()
+        print("Have a nice day!")
+        break
